@@ -3,5 +3,8 @@
 # YOUR NAME
 
 class Job:
+    def __init__(self):
+        self.priority = None
+        self.message = None
 
-    pass
+    

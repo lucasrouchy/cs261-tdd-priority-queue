@@ -21,13 +21,13 @@ class TestJob(unittest.TestCase):
         except NameError:
             self.fail("Could not instantiate Job.")
 
-    # def test_default_attributes(self):
-    #     """
-    #     A default Job has a priority and message that are None.
-    #     """
-    #     j = Job()
-    #     self.assertEqual(None, j.priority)
-    #     self.assertEqual(None, j.message)
+    def test_default_attributes(self):
+        """
+        A default Job has a priority and message that are None.
+        """
+        j = Job()
+        self.assertEqual(None, j.priority)
+        self.assertEqual(None, j.message)
 
 
     # def test_attributes(self):
