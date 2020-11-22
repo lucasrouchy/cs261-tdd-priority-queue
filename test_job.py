@@ -43,26 +43,26 @@ class TestJob(unittest.TestCase):
     Hint: Investigate how to override Python comparison operators.
     """
 
-    # def test_eq(self):
-    #     """
-    #     Jobs with equivalent priorities are equal to each other.
-    #     """
-    #     first = Job(1, "Fake message")
-    #     second = Job(1, "Don't care about the message")
-    #     third = Job(3, "Don't care about the message")
-    #     self.assertTrue(first == second)
-    #     self.assertTrue(second == first)
-    #     self.assertFalse(first == third)
-    #     self.assertFalse(second == third)
+    def test_eq(self):
+        """
+        Jobs with equivalent priorities are equal to each other.
+        """
+        first = Job(1, "Fake message")
+        second = Job(1, "Don't care about the message")
+        third = Job(3, "Don't care about the message")
+        self.assertTrue(first == second)
+        self.assertTrue(second == first)
+        self.assertFalse(first == third)
+        self.assertFalse(second == third)
 
-    # def test_lt(self):
-    #     """
-    #     A Job with a smaller priority is 'less than' a job with a larger priority.
-    #     """
-    #     smaller = Job(1, "Fake message")
-    #     larger = Job(10, "Fake message")
-    #     self.assertTrue(smaller < larger)
-    #     self.assertFalse(larger < smaller)
+    def test_lt(self):
+        """
+        A Job with a smaller priority is 'less than' a job with a larger priority.
+        """
+        smaller = Job(1, "Fake message")
+        larger = Job(10, "Fake message")
+        self.assertTrue(smaller < larger)
+        self.assertFalse(larger < smaller)
 
     # def test_gt(self):
     #     """
