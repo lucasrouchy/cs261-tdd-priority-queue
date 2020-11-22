@@ -12,4 +12,6 @@ class Job:
         return self.priority < p.priority
     def __gt__(self,p):
         return self.priority > p.priority
+    def __le__(self,p):
+        return self.priority <= p.priority
     
