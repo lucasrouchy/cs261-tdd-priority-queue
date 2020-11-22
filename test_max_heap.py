@@ -62,33 +62,33 @@ class TestMaxHeap(unittest.TestCase):
     use elsewhere.
     """
 
-    # def test_empty_initial(self):
-    #     """
-    #     A new heap is empty.
-    #     Hint: _size is a convenient abstraction, and helps avoid repetitive code.
-    #     """
-    #     h = MaxHeap()
-    #     self.assertTrue(h._is_empty())
+    def test_empty_initial(self):
+        """
+        A new heap is empty.
+        Hint: _size is a convenient abstraction, and helps avoid repetitive code.
+        """
+        h = MaxHeap()
+        self.assertTrue(h._is_empty())
 
-    # def test_not_empty(self):
-    #     """
-    #     A heap is not empty if there are items in its data list.
-    #     """
-    #     h = MaxHeap()
-    #     h._data.append('fake')
-    #     self.assertFalse(h._is_empty())
-    #     h._data.append('fake')
-    #     self.assertFalse(h._is_empty())
+    def test_not_empty(self):
+        """
+        A heap is not empty if there are items in its data list.
+        """
+        h = MaxHeap()
+        h._data.append('fake')
+        self.assertFalse(h._is_empty())
+        h._data.append('fake')
+        self.assertFalse(h._is_empty())
 
-    # def test_empty(self):
-    #     """
-    #     A heap with no items in its data list is empty.
-    #     """
-    #     h = MaxHeap()
-    #     h._data.append('fake')
-    #     h._data.append('fake')
-    #     h._data = []
-    #     self.assertTrue(h._is_empty())
+    def test_empty(self):
+        """
+        A heap with no items in its data list is empty.
+        """
+        h = MaxHeap()
+        h._data.append('fake')
+        h._data.append('fake')
+        h._data = []
+        self.assertTrue(h._is_empty())
 
     """
     Last index. The index of the last element in the heap.
