@@ -86,34 +86,34 @@ class TestJob(unittest.TestCase):
         self.assertTrue(smaller <= smaller2)
         self.assertFalse(larger <= smaller2)
 
-    # def test_ge(self):
-    #     """
-    #     A Job with a larger priority is 'greater than or equal to' a job with an
-    #     equal or smaller priority.
-    #     """
-    #     larger = Job(10, "Fake message")
-    #     larger2 = Job(10, "Fake message")
-    #     smaller = Job(1, "Fake message")
-    #     self.assertTrue(larger >= smaller)
-    #     self.assertFalse(smaller >= larger)
-    #     self.assertTrue(larger >= larger2)
-    #     self.assertFalse(smaller >= larger2)
+    def test_ge(self):
+        """
+        A Job with a larger priority is 'greater than or equal to' a job with an
+        equal or smaller priority.
+        """
+        larger = Job(10, "Fake message")
+        larger2 = Job(10, "Fake message")
+        smaller = Job(1, "Fake message")
+        self.assertTrue(larger >= smaller)
+        self.assertFalse(smaller >= larger)
+        self.assertTrue(larger >= larger2)
+        self.assertFalse(smaller >= larger2)
 
     """
     String representation. Might be handy later, but hopefully you won't need it.
     """
 
-    # def test_repr(self):
-    #     """
-    #     A job displays its priority and message when printed.
-    #     Hint: Investigate __repr__.
-    #     """
-    #     j = Job(42, "Fake message one")
-    #     self.assertEqual("Job 42: Fake message one", str(j))
-    #     self.assertEqual("Job 42: Fake message one", repr(j))
-    #     j = Job(76, "Fake message two")
-    #     self.assertEqual("Job 76: Fake message two", str(j))
-    #     self.assertEqual("Job 76: Fake message two", repr(j))
+    def test_repr(self):
+        """
+        A job displays its priority and message when printed.
+        Hint: Investigate __repr__.
+        """
+        j = Job(42, "Fake message one")
+        self.assertEqual("Job 42: Fake message one", str(j))
+        self.assertEqual("Job 42: Fake message one", repr(j))
+        j = Job(76, "Fake message two")
+        self.assertEqual("Job 76: Fake message two", str(j))
+        self.assertEqual("Job 76: Fake message two", repr(j))
 
 
 def fake_value():

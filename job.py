@@ -14,4 +14,5 @@ class Job:
         return self.priority > p.priority
     def __le__(self,p):
         return self.priority <= p.priority
-    
+    def __repr__(self):
+        return 'Job '+str(self.priority)+': '+str(self.message)
