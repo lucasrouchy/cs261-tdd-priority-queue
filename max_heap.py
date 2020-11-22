@@ -6,5 +6,4 @@
 # YOUR NAME
 
 class MaxHeap:
-
-   pass
+   _data = []

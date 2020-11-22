@@ -26,36 +26,36 @@ class TestMaxHeap(unittest.TestCase):
     A heap stores its data in an array, such as a Python list.
     """
 
-    # def test_internal_data(self):
-    #     """
-    #     A MaxHeap uses an array (a dynamic array / Python list) to store its data.
-    #     """
-    #     h = MaxHeap()
-    #     self.assertEqual(list, type(h._data))
-    #     self.assertEqual(0, len(h._data))
+    def test_internal_data(self):
+        """
+        A MaxHeap uses an array (a dynamic array / Python list) to store its data.
+        """
+        h = MaxHeap()
+        self.assertEqual(list, type(h._data))
+        self.assertEqual(0, len(h._data))
 
     """
     Size is the number of items in the heap.
     """
 
-    # def test_size_initial(self):
-    #     """
-    #     The _size() of a new heap is 0.
-    #     """
-    #     h = MaxHeap()
-    #     self.assertEqual(0, h._size())
+    def test_size_initial(self):
+        """
+        The _size() of a new heap is 0.
+        """
+        h = MaxHeap()
+        self.assertEqual(0, h._size())
 
-    # def test_size_data(self):
-    #     """
-    #     The _size() of a heap is equal to the number of values in its list.
-    #     """
-    #     h = MaxHeap()
-    #     h._data.append('fake')
-    #     self.assertEqual(1, h._size())
-    #     h._data.append('fake')
-    #     self.assertEqual(2, h._size())
-    #     h._data.pop()
-    #     self.assertEqual(1, h._size())
+    def test_size_data(self):
+        """
+        The _size() of a heap is equal to the number of values in its list.
+        """
+        h = MaxHeap()
+        h._data.append('fake')
+        self.assertEqual(1, h._size())
+        h._data.append('fake')
+        self.assertEqual(2, h._size())
+        h._data.pop()
+        self.assertEqual(1, h._size())
 
     """
     Emptiness. A warm-up. Good to know, and a handy abstraction that you might
