@@ -194,18 +194,18 @@ class TestMaxHeap(unittest.TestCase):
         self.assertEqual(7, h._left_child_index(3))
         self.assertEqual(8675309, h._left_child_index(4337654))
 
-    # def test_right_child_index(self):
-    #     """
-    #     An element at index i has a right child at index ____.
-    #     Hint: Know how the heap works. Look up and study the concept.
-    #     """
-    #     h = MaxHeap()
-    #     # This method just calculates the index. It doesn't care about the data.
-    #     self.assertEqual(2, h._right_child_index(0))
-    #     self.assertEqual(4, h._right_child_index(1))
-    #     self.assertEqual(6, h._right_child_index(2))
-    #     self.assertEqual(8, h._right_child_index(3))
-    #     self.assertEqual(5446, h._right_child_index(2722))
+    def test_right_child_index(self):
+        """
+        An element at index i has a right child at index ____.
+        Hint: Know how the heap works. Look up and study the concept.
+        """
+        h = MaxHeap()
+        # This method just calculates the index. It doesn't care about the data.
+        self.assertEqual(2, h._right_child_index(0))
+        self.assertEqual(4, h._right_child_index(1))
+        self.assertEqual(6, h._right_child_index(2))
+        self.assertEqual(8, h._right_child_index(3))
+        self.assertEqual(5446, h._right_child_index(2722))
 
     # def test_parent_index(self):
     #     """

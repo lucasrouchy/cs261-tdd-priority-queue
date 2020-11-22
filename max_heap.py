@@ -20,6 +20,8 @@ class MaxHeap:
       return self._data[index]
    def _left_child_index(self, index):
       return index * 2 + 1
-      
+   def _right_child_index(self, index):
+      return index * 2 + 1
+   
 
 
