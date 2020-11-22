@@ -96,40 +96,40 @@ class TestMaxHeap(unittest.TestCase):
     moves the last element to the root position. So this will be handy.
     """
 
-    # def test_last_index_initial(self):
-    #     """
-    #     The 'last index' of an empty heap happens to be -1.
-    #     Hint: Easy to calculate if you know its size.
-    #     """
-    #     h = MaxHeap()
-    #     self.assertEqual(-1, h._last_index())
+    def test_last_index_initial(self):
+        """
+        The 'last index' of an empty heap happens to be -1.
+        Hint: Easy to calculate if you know its size.
+        """
+        h = MaxHeap()
+        self.assertEqual(-1, h._last_index())
 
-    # def test_last_index_one(self):
-    #     """
-    #     The last index of a heap with one element is 0.
-    #     Hint: Easy, if you know how to determine the last index of a list.
-    #     """
-    #     h = MaxHeap()
-    #     h._data.append('fake')
-    #     self.assertEqual(0, h._last_index())
+    def test_last_index_one(self):
+        """
+        The last index of a heap with one element is 0.
+        Hint: Easy, if you know how to determine the last index of a list.
+        """
+        h = MaxHeap()
+        h._data.append('fake')
+        self.assertEqual(0, h._last_index())
 
-    # def test_last_index_two(self):
-    #     """
-    #     The last index of a heap with two elements is 1.
-    #     """
-    #     h = MaxHeap()
-    #     h._data.append('fake')
-    #     h._data.append('fake')
-    #     self.assertEqual(1, h._last_index())
+    def test_last_index_two(self):
+        """
+        The last index of a heap with two elements is 1.
+        """
+        h = MaxHeap()
+        h._data.append('fake')
+        h._data.append('fake')
+        self.assertEqual(1, h._last_index())
 
-    # def test_last_index_42(self):
-    #     """
-    #     The last index of a heap with forty-two elements is 41.
-    #     """
-    #     h = MaxHeap()
-    #     for _ in range(42):
-    #         h._data.append('fake')
-    #     self.assertEqual(41, h._last_index())
+    def test_last_index_42(self):
+        """
+        The last index of a heap with forty-two elements is 41.
+        """
+        h = MaxHeap()
+        for _ in range(42):
+            h._data.append('fake')
+        self.assertEqual(41, h._last_index())
 
     """
     Value at an index. It's handy to grab a value at a particular index, so lets
