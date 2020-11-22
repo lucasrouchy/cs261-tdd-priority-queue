@@ -6,4 +6,9 @@
 # YOUR NAME
 
 class MaxHeap:
-   _data = []
+   def __init__(self):
+      self._data = []
+   def _size(self):
+      return len(self._data)
+      
+
