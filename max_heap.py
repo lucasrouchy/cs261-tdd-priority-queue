@@ -58,4 +58,10 @@ class MaxHeap:
       temp = self._value_at(target)
       self._data[target] = self._value_at(source)
       self._data[source] = temp
-
+   def _sift_down(self, index):
+      if self._obeys_heap_property_at_index(index):
+         return
+      else:
+         swap_index = self._greater_child_index(index)
+         self._swap(index, swap_index)
+         self._sift_down(swap_index)
