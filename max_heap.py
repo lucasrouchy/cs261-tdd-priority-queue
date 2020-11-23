@@ -4,7 +4,7 @@
 # your implementation into a recursive one!)
 # Your implementation should pass the tests in test_max_heap.py.
 # YOUR NAME
-
+import math
 class MaxHeap:
    def __init__(self):
       self._data = []
@@ -21,7 +21,9 @@ class MaxHeap:
    def _left_child_index(self, index):
       return index * 2 + 1
    def _right_child_index(self, index):
-      return index * 2 + 1
+      return index * 2 + 2
+   def _parent_index(self, index):
+      return math.floor((index - 1)/2)
    
 
 
