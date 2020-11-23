@@ -422,15 +422,15 @@ class TestMaxHeap(unittest.TestCase):
         h._data.append('fake')
         self.assertIsNone(h._greater_child_index(0))
 
-    # def test_greater_child_index_left_only(self):
-    #     """
-    #     The 'greater child index' of an element with just a left child (no right
-    #     child) returns the index of that left child.
-    #     """
-    #     h = MaxHeap()
-    #     h._data.append('fake')
-    #     h._data.append('fake')
-    #     self.assertEqual(1, h._greater_child_index(0))
+    def test_greater_child_index_left_only(self):
+        """
+        The 'greater child index' of an element with just a left child (no right
+        child) returns the index of that left child.
+        """
+        h = MaxHeap()
+        h._data.append('fake')
+        h._data.append('fake')
+        self.assertEqual(1, h._greater_child_index(0))
 
     # def test_greater_child_index_left(self):
     #     """

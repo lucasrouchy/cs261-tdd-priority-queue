@@ -44,7 +44,7 @@ class MaxHeap:
       if self._has_left_child(index) and self._has_right_child(index):
          return
       elif self._has_left_child(index):
-         return
+         return self._left_child_index(index)
       elif self._has_right_child(index):
          return
       else:
