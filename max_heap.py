@@ -40,6 +40,13 @@ class MaxHeap:
       return self._left_child(index) is not None
    def _has_right_child(self, index):
       return self._right_child(index) is not None
-
-
+   def _greater_child_index(self, index):
+      if self._has_left_child(index) and self._has_right_child(index):
+         return
+      elif self._has_left_child(index):
+         return
+      elif self._has_right_child(index):
+         return
+      else:
+         return None
 

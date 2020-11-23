@@ -414,13 +414,13 @@ class TestMaxHeap(unittest.TestCase):
     Therefore, it's handy to be able to determine the index of the larger child.
     """
 
-    # def test_greater_child_index_one(self):
-    #     """
-    #     The 'greater child index' of an element without children is None.
-    #     """
-    #     h = MaxHeap()
-    #     h._data.append('fake')
-    #     self.assertIsNone(h._greater_child_index(0))
+    def test_greater_child_index_one(self):
+        """
+        The 'greater child index' of an element without children is None.
+        """
+        h = MaxHeap()
+        h._data.append('fake')
+        self.assertIsNone(h._greater_child_index(0))
 
     # def test_greater_child_index_left_only(self):
     #     """
