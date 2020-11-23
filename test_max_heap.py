@@ -385,24 +385,24 @@ class TestMaxHeap(unittest.TestCase):
         self.assertFalse(h._has_left_child(3))
         self.assertFalse(h._has_left_child(4))
 
-    # def test_has_right_child(self):
-    #     """
-    #     True when an element's right child isn't None. Otherwise False.
-    #     """
-    #     h = MaxHeap()
-    #     fake_root = fake_value()
-    #     fake_left_child = fake_value()
-    #     fake_right_child = fake_value()
-    #     fake_left_left_child = fake_value()
-    #     h._data.append(fake_root)
-    #     h._data.append(fake_left_child)
-    #     h._data.append(fake_right_child)
-    #     h._data.append(fake_left_left_child)
-    #     self.assertTrue(h._has_right_child(0))
-    #     self.assertFalse(h._has_right_child(1))
-    #     self.assertFalse(h._has_right_child(2))
-    #     self.assertFalse(h._has_right_child(3))
-    #     self.assertFalse(h._has_right_child(4))
+    def test_has_right_child(self):
+        """
+        True when an element's right child isn't None. Otherwise False.
+        """
+        h = MaxHeap()
+        fake_root = fake_value()
+        fake_left_child = fake_value()
+        fake_right_child = fake_value()
+        fake_left_left_child = fake_value()
+        h._data.append(fake_root)
+        h._data.append(fake_left_child)
+        h._data.append(fake_right_child)
+        h._data.append(fake_left_left_child)
+        self.assertTrue(h._has_right_child(0))
+        self.assertFalse(h._has_right_child(1))
+        self.assertFalse(h._has_right_child(2))
+        self.assertFalse(h._has_right_child(3))
+        self.assertFalse(h._has_right_child(4))
 
     """
     Index of the greater child.
