@@ -54,5 +54,8 @@ class MaxHeap:
          return self._value_at(index) >= self._value_at(self._greater_child_index(index)) 
       else:
          return True
-
+   def _swap(self, target, source):
+      temp = self._value_at(target)
+      self._data[target] = self._value_at(source)
+      self._data[source] = temp
 

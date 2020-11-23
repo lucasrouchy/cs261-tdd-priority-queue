@@ -550,26 +550,26 @@ class TestMaxHeap(unittest.TestCase):
     swap a child with its parent, or vice-versa. But, this method shouldn't care.
     """
 
-    # def test_swap(self):
-    #     """
-    #     Given an index a and an index b, swapping a with b moves b's value to a
-    #     and a's value to b.
-    #     Hint: A classic algorithm. Three lines.
-    #     """
-    #     h = MaxHeap()
-    #     h._data.append(10)
-    #     h._data.append(5)
-    #     h._data.append(1)
-    #     h._swap(0, 1)
-    #     self.assertEqual(5, h._data[0])
-    #     self.assertEqual(10, h._data[1])
-    #     h._swap(0, 2)
-    #     self.assertEqual(1, h._data[0])
-    #     self.assertEqual(5, h._data[2])
-    #     # We'll never swap siblings, but let's make sure swap is simple.
-    #     h._swap(1, 2)
-    #     self.assertEqual(5, h._data[1])
-    #     self.assertEqual(10, h._data[2])
+    def test_swap(self):
+        """
+        Given an index a and an index b, swapping a with b moves b's value to a
+        and a's value to b.
+        Hint: A classic algorithm. Three lines.
+        """
+        h = MaxHeap()
+        h._data.append(10)
+        h._data.append(5)
+        h._data.append(1)
+        h._swap(0, 1)
+        self.assertEqual(5, h._data[0])
+        self.assertEqual(10, h._data[1])
+        h._swap(0, 2)
+        self.assertEqual(1, h._data[0])
+        self.assertEqual(5, h._data[2])
+        # We'll never swap siblings, but let's make sure swap is simple.
+        h._swap(1, 2)
+        self.assertEqual(5, h._data[1])
+        self.assertEqual(10, h._data[2])
 
     """
     Sift down. An important heap algorithm.
