@@ -444,18 +444,18 @@ class TestMaxHeap(unittest.TestCase):
         h._data.append(1)
         self.assertEqual(1, h._greater_child_index(0))
 
-    # def test_greater_child_index_right(self):
-    #     """
-    #     The 'greater child index' of an element with a left and right child, is
-    #     the index of the right child when it has a larger value than the left child.
-    #     Hint: Refine your logic. What are the possible states? No children, a
-    #           left but no right, or a left and a right.
-    #     """
-    #     h = MaxHeap()
-    #     h._data.append(10)
-    #     h._data.append(1)
-    #     h._data.append(5)
-    #     self.assertEqual(2, h._greater_child_index(0))
+    def test_greater_child_index_right(self):
+        """
+        The 'greater child index' of an element with a left and right child, is
+        the index of the right child when it has a larger value than the left child.
+        Hint: Refine your logic. What are the possible states? No children, a
+              left but no right, or a left and a right.
+        """
+        h = MaxHeap()
+        h._data.append(10)
+        h._data.append(1)
+        h._data.append(5)
+        self.assertEqual(2, h._greater_child_index(0))
 
     """
     The max-heap property. Obey.
