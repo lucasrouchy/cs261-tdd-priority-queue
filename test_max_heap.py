@@ -432,17 +432,17 @@ class TestMaxHeap(unittest.TestCase):
         h._data.append('fake')
         self.assertEqual(1, h._greater_child_index(0))
 
-    # def test_greater_child_index_left(self):
-    #     """
-    #     The 'greater child index' of an element with a left and right child, is
-    #     the index of the left child when it has a value greater than or equal to
-    #     the right child.
-    #     """
-    #     h = MaxHeap()
-    #     h._data.append(10)
-    #     h._data.append(5)
-    #     h._data.append(1)
-    #     self.assertEqual(1, h._greater_child_index(0))
+    def test_greater_child_index_left(self):
+        """
+        The 'greater child index' of an element with a left and right child, is
+        the index of the left child when it has a value greater than or equal to
+        the right child.
+        """
+        h = MaxHeap()
+        h._data.append(10)
+        h._data.append(5)
+        h._data.append(1)
+        self.assertEqual(1, h._greater_child_index(0))
 
     # def test_greater_child_index_right(self):
     #     """

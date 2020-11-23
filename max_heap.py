@@ -42,7 +42,7 @@ class MaxHeap:
       return self._right_child(index) is not None
    def _greater_child_index(self, index):
       if self._has_left_child(index) and self._has_right_child(index):
-         return
+         return max(self._left_child_index(index), self._right_child_index(index), key=self._value_at)
       elif self._has_left_child(index):
          return self._left_child_index(index)
       elif self._has_right_child(index):
