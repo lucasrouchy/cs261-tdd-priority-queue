@@ -258,41 +258,41 @@ class TestMaxHeap(unittest.TestCase):
         self.assertEqual(fake_left_child, h._parent(3))
         self.assertEqual(fake_left_child, h._parent(4))
 
-    # def test_parent_invalid(self):
-    #     """
-    #     Retrieving the parent value for an index without a parent is invalid.
-    #     """
-    #     h = MaxHeap()
-    #     self.assertRaises(IndexError, h._parent, 0)
-    #     self.assertRaises(IndexError, h._parent, 1)
-    #     self.assertRaises(IndexError, h._parent, 2)
-    #     h._data.append('fake')
-    #     try:
-    #         h._parent(1)
-    #         h._parent(2)
-    #     except IndexError:
-    #         self.fail("Could not retrieve parent properly.")
-    #     for i in range(3, 9):
-    #         self.assertRaises(IndexError, h._parent, i)
+    def test_parent_invalid(self):
+        """
+        Retrieving the parent value for an index without a parent is invalid.
+        """
+        h = MaxHeap()
+        self.assertRaises(IndexError, h._parent, 0)
+        self.assertRaises(IndexError, h._parent, 1)
+        self.assertRaises(IndexError, h._parent, 2)
+        h._data.append('fake')
+        try:
+            h._parent(1)
+            h._parent(2)
+        except IndexError:
+            self.fail("Could not retrieve parent properly.")
+        for i in range(3, 9):
+            self.assertRaises(IndexError, h._parent, i)
 
-    # def test_left_child_none(self):
-    #     """
-    #     If the 'left child index' of an element at index i exceeds the bounds of
-    #     the data list, just return None.
-    #     Hint: Draw both a 5-element array and tree. What is the value of the left
-    #           child of the third (index 2) element? And the fourth? And the fifth?
-    #     """
-    #     h = MaxHeap()
-    #     h._data.append('fake')
-    #     h._data.append('fake')
-    #     h._data.append('fake')
-    #     self.assertIsNone(h._left_child(1))
-    #     self.assertIsNone(h._left_child(2))
-    #     h._data.append('fake')
-    #     h._data.append('fake')
-    #     self.assertIsNone(h._left_child(2))
-    #     self.assertIsNone(h._left_child(3))
-    #     self.assertIsNone(h._left_child(4))
+    def test_left_child_none(self):
+        """
+        If the 'left child index' of an element at index i exceeds the bounds of
+        the data list, just return None.
+        Hint: Draw both a 5-element array and tree. What is the value of the left
+              child of the third (index 2) element? And the fourth? And the fifth?
+        """
+        h = MaxHeap()
+        h._data.append('fake')
+        h._data.append('fake')
+        h._data.append('fake')
+        self.assertIsNone(h._left_child(1))
+        self.assertIsNone(h._left_child(2))
+        h._data.append('fake')
+        h._data.append('fake')
+        self.assertIsNone(h._left_child(2))
+        self.assertIsNone(h._left_child(3))
+        self.assertIsNone(h._left_child(4))
 
     # def test_left_child(self):
     #     """
