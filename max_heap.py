@@ -27,7 +27,15 @@ class MaxHeap:
    def _parent(self, index):
       return self._data[self._parent_index(index)]
    def _left_child(self, index):
-      if IndexError:
+      try:
+         return self._data[self._left_child_index(index)]
+      except IndexError:
          return None
+   def _right_child(self, index):
+      try:
+         return self._data[self._right_child_index(index)]
+      except IndexError:
+         return None
+
 
 

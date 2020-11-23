@@ -294,71 +294,71 @@ class TestMaxHeap(unittest.TestCase):
         self.assertIsNone(h._left_child(3))
         self.assertIsNone(h._left_child(4))
 
-    # def test_left_child(self):
-    #     """
-    #     Given an index i, the left child is the value at the 'left child index'
-    #     of i.
-    #     Hint: The phrase above is nearly identical to the code, if you use your
-    #           abstractions.
-    #     """
-    #     h = MaxHeap()
-    #     fake_root = fake_value()
-    #     fake_left_child = fake_value()
-    #     fake_right_child = fake_value()
-    #     fake_left_left_child = fake_value()
-    #     fake_left_right_child = fake_value()
-    #     h._data.append(fake_root)
-    #     h._data.append(fake_left_child)
-    #     h._data.append(fake_right_child)
-    #     h._data.append(fake_left_left_child)
-    #     h._data.append(fake_left_right_child)
-    #     self.assertEqual(fake_left_child, h._left_child(0))
-    #     self.assertEqual(fake_left_left_child, h._left_child(1))
-    #     self.assertIsNone(h._left_child(2))
-    #     self.assertIsNone(h._left_child(3))
-    #     self.assertIsNone(h._left_child(4))
+    def test_left_child(self):
+        """
+        Given an index i, the left child is the value at the 'left child index'
+        of i.
+        Hint: The phrase above is nearly identical to the code, if you use your
+              abstractions.
+        """
+        h = MaxHeap()
+        fake_root = fake_value()
+        fake_left_child = fake_value()
+        fake_right_child = fake_value()
+        fake_left_left_child = fake_value()
+        fake_left_right_child = fake_value()
+        h._data.append(fake_root)
+        h._data.append(fake_left_child)
+        h._data.append(fake_right_child)
+        h._data.append(fake_left_left_child)
+        h._data.append(fake_left_right_child)
+        self.assertEqual(fake_left_child, h._left_child(0))
+        self.assertEqual(fake_left_left_child, h._left_child(1))
+        self.assertIsNone(h._left_child(2))
+        self.assertIsNone(h._left_child(3))
+        self.assertIsNone(h._left_child(4))
 
-    # def test_right_child_none(self):
-    #     """
-    #     If the 'right child index' of an element at index i exceeds the bounds of
-    #     the data list, just return None.
-    #     Hint: Draw both a 5-element array and tree. What is the value of the right
-    #           child of the third (index 2) element? And the fourth? And the fifth?
-    #     """
-    #     h = MaxHeap()
-    #     h._data.append('fake')
-    #     h._data.append('fake')
-    #     h._data.append('fake')
-    #     self.assertIsNone(h._right_child(2))
-    #     h._data.append('fake')
-    #     h._data.append('fake')
-    #     self.assertIsNone(h._right_child(2))
-    #     self.assertIsNone(h._right_child(3))
-    #     self.assertIsNone(h._right_child(4))
+    def test_right_child_none(self):
+        """
+        If the 'right child index' of an element at index i exceeds the bounds of
+        the data list, just return None.
+        Hint: Draw both a 5-element array and tree. What is the value of the right
+              child of the third (index 2) element? And the fourth? And the fifth?
+        """
+        h = MaxHeap()
+        h._data.append('fake')
+        h._data.append('fake')
+        h._data.append('fake')
+        self.assertIsNone(h._right_child(2))
+        h._data.append('fake')
+        h._data.append('fake')
+        self.assertIsNone(h._right_child(2))
+        self.assertIsNone(h._right_child(3))
+        self.assertIsNone(h._right_child(4))
 
-    # def test_right_child(self):
-    #     """
-    #     Given an index i, the right child is the value at the 'right child index'
-    #     of i.
-    #     Hint: The phrase above is nearly identical to the code, if you use your
-    #           abstractions.
-    #     """
-    #     h = MaxHeap()
-    #     fake_root = fake_value()
-    #     fake_left_child = fake_value()
-    #     fake_right_child = fake_value()
-    #     fake_left_left_child = fake_value()
-    #     fake_left_right_child = fake_value()
-    #     h._data.append(fake_root)
-    #     h._data.append(fake_left_child)
-    #     h._data.append(fake_right_child)
-    #     h._data.append(fake_left_left_child)
-    #     h._data.append(fake_left_right_child)
-    #     self.assertEqual(fake_right_child, h._right_child(0))
-    #     self.assertEqual(fake_left_right_child, h._right_child(1))
-    #     self.assertIsNone(h._right_child(2))
-    #     self.assertIsNone(h._right_child(3))
-    #     self.assertIsNone(h._right_child(4))
+    def test_right_child(self):
+        """
+        Given an index i, the right child is the value at the 'right child index'
+        of i.
+        Hint: The phrase above is nearly identical to the code, if you use your
+              abstractions.
+        """
+        h = MaxHeap()
+        fake_root = fake_value()
+        fake_left_child = fake_value()
+        fake_right_child = fake_value()
+        fake_left_left_child = fake_value()
+        fake_left_right_child = fake_value()
+        h._data.append(fake_root)
+        h._data.append(fake_left_child)
+        h._data.append(fake_right_child)
+        h._data.append(fake_left_left_child)
+        h._data.append(fake_left_right_child)
+        self.assertEqual(fake_right_child, h._right_child(0))
+        self.assertEqual(fake_left_right_child, h._right_child(1))
+        self.assertIsNone(h._right_child(2))
+        self.assertIsNone(h._right_child(3))
+        self.assertIsNone(h._right_child(4))
 
     """
     Left child and right child presence. These will be handy later.
