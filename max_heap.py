@@ -17,25 +17,30 @@ class MaxHeap:
    def _last_index(self):
       return self._size() - 1
    def _value_at(self, index):
-      return self._data[index]
+      if 0 <= index <= self._size():
+            return self._data[index]
+      else:
+         raise IndexError
    def _left_child_index(self, index):
       return index * 2 + 1
    def _right_child_index(self, index):
       return index * 2 + 2
    def _parent_index(self, index):
-      return math.floor((index - 1)/2)
+      return (index-1) // 2
    def _parent(self, index):
-      return self._data[self._parent_index(index)]
+       return self._value_at(self._parent_index(index))
    def _left_child(self, index):
-      try:
-         return self._data[self._left_child_index(index)]
-      except IndexError:
+      child_index = self._left_child_index(index)
+      if child_index >= self._size():
          return None
+      else:
+         return self._value_at(child_index)
    def _right_child(self, index):
-      try:
-         return self._data[self._right_child_index(index)]
-      except IndexError:
+      child_index = self._right_child_index(index)
+      if child_index >= self._size():
          return None
+      else:
+         return self._value_at(child_index)
    def _has_left_child(self, index):
       return self._left_child(index) is not None
    def _has_right_child(self, index):
@@ -65,3 +70,10 @@ class MaxHeap:
          swap_index = self._greater_child_index(index)
          self._swap(index, swap_index)
          self._sift_down(swap_index)
+   def _sift_up(self, index):
+      if index == 0 or self._obeys_heap_property_at_index(index):
+         return
+      else:
+         self._swap(index, self._parent_index(index))
+         self._sift_up(self._parent_index(index))
+         
