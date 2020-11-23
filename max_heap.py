@@ -24,6 +24,7 @@ class MaxHeap:
       return index * 2 + 2
    def _parent_index(self, index):
       return math.floor((index - 1)/2)
-   
+   def _parent(self, index):
+      return self._data[self._parent_index(index)]
 
 

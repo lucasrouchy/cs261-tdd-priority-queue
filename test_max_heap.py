@@ -236,27 +236,27 @@ class TestMaxHeap(unittest.TestCase):
     Hint: Use your previous abstractions. Don't repeat yourself.
     """
 
-    # def test_parent(self):
-    #     """
-    #     Given an index i, the parent is the value at the 'parent index' of i.
-    #     Hint: The phrase above is nearly identical to the code, if you use your
-    #           abstractions.
-    #     """
-    #     h = MaxHeap()
-    #     fake_root = fake_value()
-    #     fake_left_child = fake_value()
-    #     fake_right_child = fake_value()
-    #     fake_left_left_child = fake_value()
-    #     fake_left_right_child = fake_value()
-    #     h._data.append(fake_root)
-    #     h._data.append(fake_left_child)
-    #     h._data.append(fake_right_child)
-    #     h._data.append(fake_left_left_child)
-    #     h._data.append(fake_left_right_child)
-    #     self.assertEqual(fake_root, h._parent(1))
-    #     self.assertEqual(fake_root, h._parent(2))
-    #     self.assertEqual(fake_left_child, h._parent(3))
-    #     self.assertEqual(fake_left_child, h._parent(4))
+    def test_parent(self):
+        """
+        Given an index i, the parent is the value at the 'parent index' of i.
+        Hint: The phrase above is nearly identical to the code, if you use your
+              abstractions.
+        """
+        h = MaxHeap()
+        fake_root = fake_value()
+        fake_left_child = fake_value()
+        fake_right_child = fake_value()
+        fake_left_left_child = fake_value()
+        fake_left_right_child = fake_value()
+        h._data.append(fake_root)
+        h._data.append(fake_left_child)
+        h._data.append(fake_right_child)
+        h._data.append(fake_left_left_child)
+        h._data.append(fake_left_right_child)
+        self.assertEqual(fake_root, h._parent(1))
+        self.assertEqual(fake_root, h._parent(2))
+        self.assertEqual(fake_left_child, h._parent(3))
+        self.assertEqual(fake_left_child, h._parent(4))
 
     # def test_parent_invalid(self):
     #     """
